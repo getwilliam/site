@@ -1,0 +1,79 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0F"/>
+      <stop offset="100%" style="stop-color:#12121A"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#2563EB"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="50%" style="stop-color:#60A5FA"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Glow effects -->
+  <circle cx="900" cy="100" r="200" fill="#3B82F6" opacity="0.1" filter="url(#glow)"/>
+  <circle cx="200" cy="500" r="150" fill="#F59E0B" opacity="0.08" filter="url(#glow)"/>
+  
+  <!-- Logo container with hourglass -->
+  <g transform="translate(80, 80)">
+    <rect width="64" height="64" rx="16" fill="url(#blueGrad)"/>
+    <!-- Hourglass icon -->
+    <g transform="translate(14, 10)">
+      <path d="M4 4 L4 8 C4 12 10 18 18 22 C10 26 4 32 4 36 L4 40 L32 40 L32 36 C32 32 26 26 18 22 C26 18 32 12 32 8 L32 4 Z" 
+            fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 8 L28 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <path d="M8 36 L28 36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <!-- Sand in bottom -->
+      <path d="M12 36 C12 32 15 28 18 26 C21 28 24 32 24 36 Z" fill="white" opacity="0.7"/>
+      <!-- Sand falling -->
+      <circle cx="18" cy="22" r="1.5" fill="white" opacity="0.8"/>
+    </g>
+  </g>
+  <text x="160" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="white">William</text>
+  
+  <!-- Main headline -->
+  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="bold" fill="white">AI-Powered Legal Billing</text>
+  
+  <!-- Subheadline with gradient -->
+  <text x="80" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="url(#textGrad)">Time tracking that thinks like a lawyer</text>
+  
+  <!-- Description -->
+  <text x="80" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#A1A1AA">Capture every billable moment • Generate compliant narratives • Unlock practice insights</text>
+  
+  <!-- Stats bar - only 2 stats now -->
+  <g transform="translate(80, 500)">
+    <rect width="200" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="100" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">2 days</text>
+    <text x="100" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#71717A" text-anchor="middle">Saved per month</text>
+  </g>
+  
+  <g transform="translate(300, 500)">
+    <rect width="200" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="100" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">95%</text>
+    <text x="100" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#71717A" text-anchor="middle">Billing accuracy</text>
+  </g>
+  
+  <!-- Website URL -->
+  <text x="1120" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#71717A" text-anchor="end">getwilliam.xyz</text>
+</svg>

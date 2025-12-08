@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#logoGrad)"/>
+  <!-- Hourglass -->
+  <g transform="translate(14, 10)">
+    <path d="M4 4 L4 8 C4 12 10 18 18 22 C10 26 4 32 4 36 L4 40 L32 40 L32 36 C32 32 26 26 18 22 C26 18 32 12 32 8 L32 4 Z" 
+          fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 8 L28 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 36 L28 36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <!-- Sand in bottom -->
+    <path d="M12 36 C12 32 15 28 18 26 C21 28 24 32 24 36 Z" fill="white" opacity="0.7"/>
+    <!-- Sand falling -->
+    <circle cx="18" cy="22" r="1.5" fill="white" opacity="0.8"/>
+  </g>
+</svg>
