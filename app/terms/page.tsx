@@ -6,11 +6,11 @@ import { ArrowLeft } from 'lucide-react'
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-[#0A0A0F] relative noise-overlay">
+    <main className="min-h-screen bg-[#0A0A0F] relative noise-overlay overflow-x-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
       
-      <div className="relative max-w-4xl mx-auto px-6 py-12">
-        <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12">
+      <div className="relative max-w-4xl mx-auto px-5 sm:px-6 py-8 sm:py-12">
+        <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 sm:mb-12 text-sm sm:text-base">
           <ArrowLeft className="w-4 h-4" />
           Back to home
         </Link>
@@ -20,12 +20,12 @@ export default function TermsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="prose prose-invert max-w-none"
         >
-          <h1 className="text-4xl md:text-5xl font-bold font-display mb-4">Terms of Service</h1>
-          <p className="text-zinc-400 text-lg mb-12">Last updated: December 7, 2025</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">Terms of Service</h1>
+          <p className="text-zinc-400 text-base sm:text-lg mb-8 sm:mb-12">Last updated: December 7, 2025</p>
 
-          <div className="space-y-8 text-zinc-300">
+          <div className="space-y-6 sm:space-y-8 text-zinc-300 text-sm sm:text-base">
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
               <p>
                 These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you and William Technologies, Inc. (&quot;William,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) governing your access to and use of the William platform, including any associated software, applications, and services (collectively, the &quot;Services&quot;).
               </p>
@@ -35,7 +35,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">2. Description of Services</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">2. Description of Services</h2>
               <p>
                 William provides an AI-powered legal billing and time tracking platform that includes:
               </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">3. Account Registration and Security</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">3. Account Registration and Security</h2>
               <p>
                 To use certain features of the Services, you must create an account. You agree to:
               </p>
@@ -66,26 +66,26 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">4. Subscription and Payment</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">4. Subscription and Payment</h2>
               
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">4.1 Subscription Plans</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-6 mb-3">4.1 Subscription Plans</h3>
               <p>
                 Access to the Services requires a paid subscription. Subscription plans, pricing, and features are described on our website or in a separate order form or enterprise agreement.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">4.2 Payment Terms</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-6 mb-3">4.2 Payment Terms</h3>
               <p>
                 You agree to pay all fees associated with your subscription plan. Fees are non-refundable except as expressly set forth in these Terms or required by applicable law. We may change our fees upon 30 days&apos; notice.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">4.3 Automatic Renewal</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-6 mb-3">4.3 Automatic Renewal</h3>
               <p>
                 Unless otherwise specified, subscriptions automatically renew for successive periods equal to the initial subscription term. You may cancel auto-renewal at any time before the renewal date.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">5. Acceptable Use</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">5. Acceptable Use</h2>
               <p>You agree not to use the Services to:</p>
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 <li>Violate any applicable law, regulation, or third-party rights</li>
@@ -100,40 +100,40 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">6. Intellectual Property</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">6. Intellectual Property</h2>
               
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">6.1 Our Intellectual Property</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-6 mb-3">6.1 Our Intellectual Property</h3>
               <p>
                 The Services, including all software, algorithms, user interfaces, graphics, and documentation, are owned by William and protected by intellectual property laws. We grant you a limited, non-exclusive, non-transferable license to use the Services during your subscription term.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">6.2 Your Content</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-6 mb-3">6.2 Your Content</h3>
               <p>
                 You retain ownership of all data, content, and information you submit to the Services (&quot;Your Content&quot;). You grant us a limited license to use, process, and display Your Content solely to provide the Services to you.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">6.3 Feedback</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-6 mb-3">6.3 Feedback</h3>
               <p>
                 If you provide us with suggestions, ideas, or feedback about the Services, you grant us a royalty-free, worldwide license to use, modify, and incorporate such feedback into our Services.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">7. Confidentiality</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">7. Confidentiality</h2>
               <p>
                 We understand that the information processed through our Services may include confidential and privileged attorney-client communications. We maintain strict confidentiality obligations and will not access, use, or disclose Your Content except as necessary to provide the Services or as required by law.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">8. Data Protection</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">8. Data Protection</h2>
               <p>
                 Our collection, use, and protection of personal information is governed by our <Link href="/privacy" className="text-blue-400 hover:underline">Privacy Policy</Link>. For enterprise customers, we also offer a <Link href="/dpa" className="text-blue-400 hover:underline">Data Processing Agreement</Link> that addresses GDPR and other data protection requirements.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">9. Disclaimers</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">9. Disclaimers</h2>
               <p>
                 THE SERVICES ARE PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
               </p>
@@ -143,7 +143,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">10. Limitation of Liability</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">10. Limitation of Liability</h2>
               <p>
                 TO THE MAXIMUM EXTENT PERMITTED BY LAW, WILLIAM SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR THE SERVICES.
               </p>
@@ -153,14 +153,14 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">11. Indemnification</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">11. Indemnification</h2>
               <p>
                 You agree to indemnify, defend, and hold harmless William and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your use of the Services, your violation of these Terms, or your violation of any third-party rights.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">12. Termination</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">12. Termination</h2>
               <p>
                 Either party may terminate these Terms at any time by providing written notice. Upon termination:
               </p>
@@ -173,28 +173,28 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">13. Governing Law and Disputes</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">13. Governing Law and Disputes</h2>
               <p>
                 These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws principles. Any dispute arising out of or relating to these Terms shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">14. Modifications to Terms</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">14. Modifications to Terms</h2>
               <p>
                 We may modify these Terms at any time by posting the revised terms on our website. Material changes will be communicated via email or through the Services. Your continued use of the Services after changes become effective constitutes acceptance of the modified Terms.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">15. General Provisions</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">15. General Provisions</h2>
               <p>
                 These Terms constitute the entire agreement between you and William regarding the Services. If any provision is found unenforceable, the remaining provisions will continue in effect. Our failure to enforce any right or provision shall not be deemed a waiver. You may not assign these Terms without our prior written consent.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">16. Contact Us</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">16. Contact Us</h2>
               <p>
                 If you have any questions about these Terms, please contact us at:
               </p>

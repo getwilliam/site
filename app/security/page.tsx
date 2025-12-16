@@ -75,12 +75,12 @@ export default function SecurityPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[#0A0A0F] relative noise-overlay">
+    <main className="min-h-screen bg-[#0A0A0F] relative noise-overlay overflow-x-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[150px]" />
+      <div className="absolute top-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-blue-500/10 rounded-full blur-[100px] sm:blur-[150px]" />
       
-      <div className="relative max-w-7xl mx-auto px-6 py-12">
-        <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 py-8 sm:py-12">
+        <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 sm:mb-12 text-sm sm:text-base">
           <ArrowLeft className="w-4 h-4" />
           Back to home
         </Link>
@@ -90,15 +90,15 @@ export default function SecurityPage() {
           initial="hidden"
           animate="visible"
           variants={stagger}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 md:mb-20"
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-emerald-500 mb-6">
-            <Shield className="w-10 h-10 text-white" />
+          <motion.div variants={fadeUp} className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 to-emerald-500 mb-4 sm:mb-6">
+            <Shield className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
           </motion.div>
-          <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-bold font-display mb-6">
+          <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 sm:mb-6">
             Protecting Your Data is <span className="text-gradient">Table Stakes</span>
           </motion.h1>
-          <motion.p variants={fadeUp} className="text-xl text-zinc-400 max-w-3xl mx-auto">
+          <motion.p variants={fadeUp} className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto">
             Securing your personal and client data is paramount for your firm. We&apos;ve built William from the ground up with enterprise-grade security as a core principle—not an afterthought.
           </motion.p>
         </motion.div>
@@ -109,19 +109,19 @@ export default function SecurityPage() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={stagger}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16 md:mb-20"
         >
           {securityFeatures.map((feature, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
-              className="p-6 bg-white/[0.02] rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors"
+              className="p-4 sm:p-5 md:p-6 bg-white/[0.02] rounded-xl sm:rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-blue-400" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-blue-500/10 flex items-center justify-center mb-3 sm:mb-4">
+                <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-zinc-400 text-sm">{feature.description}</p>
+              <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2">{feature.title}</h3>
+              <p className="text-zinc-400 text-xs sm:text-sm">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -131,16 +131,16 @@ export default function SecurityPage() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12 sm:mb-16 md:mb-20"
         >
-          <div className="glass rounded-2xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold font-display mb-6">Secure by Design</h2>
-                <p className="text-zinc-400 mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold font-display mb-4 sm:mb-6">Secure by Design</h2>
+                <p className="text-zinc-400 mb-4 sm:mb-6 text-sm sm:text-base">
                   We leverage best-in-class infrastructure and services to provide enterprise-grade security. Our platform runs continuously across multiple physically isolated data centers to ensure high availability and resilience.
                 </p>
-                <ul className="space-y-4">
+                <ul className="space-y-3 sm:space-y-4">
                   {[
                     'Performance is consistent, even during usage spikes',
                     'Data is encrypted at rest and in transit',
@@ -148,28 +148,28 @@ export default function SecurityPage() {
                     'Regular backups with point-in-time recovery',
                     'Continuous monitoring and threat detection'
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-zinc-300">{item}</span>
+                    <li key={i} className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-zinc-300 text-xs sm:text-sm md:text-base">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-2xl blur-2xl" />
-                <div className="relative bg-[#12121A] rounded-2xl p-8 border border-white/10">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl sm:rounded-2xl blur-2xl" />
+                <div className="relative bg-[#12121A] rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-white/10">
                   <div className="text-center">
-                    <div className="text-6xl font-bold font-display text-gradient mb-2">99.9%</div>
-                    <p className="text-zinc-400">Uptime SLA</p>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-gradient mb-1 sm:mb-2">99.9%</div>
+                    <p className="text-zinc-400 text-sm sm:text-base">Uptime SLA</p>
                   </div>
-                  <div className="grid grid-cols-2 gap-4 mt-8">
-                    <div className="text-center p-4 bg-white/[0.02] rounded-xl">
-                      <div className="text-2xl font-bold text-white">24/7</div>
-                      <p className="text-xs text-zinc-500">Monitoring</p>
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-6 sm:mt-8">
+                    <div className="text-center p-3 sm:p-4 bg-white/[0.02] rounded-lg sm:rounded-xl">
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">24/7</div>
+                      <p className="text-[10px] sm:text-xs text-zinc-500">Monitoring</p>
                     </div>
-                    <div className="text-center p-4 bg-white/[0.02] rounded-xl">
-                      <div className="text-2xl font-bold text-white">AES-256</div>
-                      <p className="text-xs text-zinc-500">Encryption</p>
+                    <div className="text-center p-3 sm:p-4 bg-white/[0.02] rounded-lg sm:rounded-xl">
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">AES-256</div>
+                      <p className="text-[10px] sm:text-xs text-zinc-500">Encryption</p>
                     </div>
                   </div>
                 </div>
@@ -184,20 +184,20 @@ export default function SecurityPage() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={stagger}
-          className="mb-20"
+          className="mb-12 sm:mb-16 md:mb-20"
         >
-          <motion.h2 variants={fadeUp} className="text-3xl font-bold font-display text-center mb-12">
+          <motion.h2 variants={fadeUp} className="text-2xl sm:text-3xl font-bold font-display text-center mb-6 sm:mb-8 md:mb-12">
             Frequently Asked Questions
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className="p-6 bg-white/[0.02] rounded-xl border border-white/5"
+                className="p-4 sm:p-5 md:p-6 bg-white/[0.02] rounded-lg sm:rounded-xl border border-white/5"
               >
-                <h3 className="font-semibold mb-3">{faq.question}</h3>
-                <p className="text-zinc-400 text-sm">{faq.answer}</p>
+                <h3 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">{faq.question}</h3>
+                <p className="text-zinc-400 text-xs sm:text-sm">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -210,12 +210,12 @@ export default function SecurityPage() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="glass rounded-2xl p-12">
-            <h2 className="text-3xl font-bold font-display mb-4">Have Security Questions?</h2>
-            <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
+          <div className="glass rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12">
+            <h2 className="text-2xl sm:text-3xl font-bold font-display mb-3 sm:mb-4">Have Security Questions?</h2>
+            <p className="text-sm sm:text-base text-zinc-400 mb-6 sm:mb-8 max-w-xl mx-auto">
               Our security team is available to discuss your specific requirements and answer any questions about how we protect your data.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-zinc-200 transition-all hover:scale-105">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-zinc-200 transition-all hover:scale-105 text-sm sm:text-base">
               Contact Our Security Team
             </Link>
           </div>
